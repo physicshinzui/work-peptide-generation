@@ -18,7 +18,7 @@ conda activate ambertools
 
 GMX=/gs/hs1/hp230064/siida/gromacs-2022.5/build/bin/gmx
 
-PDB=capped_14.pdb #$1
+#PDB=capped_14.pdb #$1
 FF=ff14SB 
 
 # Create Amber topology and coordinate files
@@ -48,6 +48,7 @@ $GMX grompp -f npt_prod.mdp  \
             -c em.gro    \
             -p system.top \
             -po mdout_npt_prod.mdp \
-            -o npt_prod.tpr
+            -o npt_prod.tpr \
+            -maxwarn 1
 
 $GMX mdrun -deffnm npt_prod #-ntomp $OMP_NUM_THREADS -ntmpi $NUM_MPI
