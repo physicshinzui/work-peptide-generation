@@ -2,7 +2,7 @@
 #$ -S /bin/bash
 #$ -cwd
 #$ -l h_rt=24:00:00
-#$ -l q_node=1
+#$ -l h_node=1
 ##$ -g hp230064
 #$ -N run
 set -eu
