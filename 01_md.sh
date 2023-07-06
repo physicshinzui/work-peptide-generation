@@ -51,4 +51,4 @@ $GMX grompp -f npt_prod.mdp  \
             -o npt_prod.tpr \
             -maxwarn 1
 
-$GMX mdrun -deffnm npt_prod #-ntomp $OMP_NUM_THREADS -ntmpi $NUM_MPI
+$GMX mdrun -deffnm npt_prod -ntomp 28 -ntmpi 1
