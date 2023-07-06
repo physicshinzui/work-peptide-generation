@@ -18,7 +18,7 @@ tpr=npt_prod.tpr
 cpt=npt_prod.cpt
 
 #==== If the simulation described by tpr file has completed and should be extended, then
-$GMX convert-tpr -s $tpr -until 500000 -o ${tpr}
+$GMX convert-tpr -s $tpr -until 100000 -o ${tpr}
 $GMX mdrun -deffnm npt_prod -s $tpr -cpi $cpt -ntomp 28 -ntmpi 1
 
 #cf. https://manual.gromacs.org/current/user-guide/managing-simulations.html
